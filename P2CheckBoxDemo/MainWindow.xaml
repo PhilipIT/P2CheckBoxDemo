@@ -1,0 +1,59 @@
+﻿<Window x:Class="P2CheckBoxDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P2CheckBoxDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="310" Width="230">
+    <StackPanel>
+        
+        <Label FontWeight="Bold">Toppings</Label>
+        <CheckBox x:Name="cbParent" IsThreeState="True"
+                  
+                  Unchecked="cdParent_Changedcheckbox"
+                  Checked="cdParent_Changedcheckbox">
+            <Label Name="cbSelected">Select/Deselect All</Label>
+        </CheckBox>
+        <CheckBox 
+                  Margin="15,5"
+                  x:Name="cbCheese"
+                  VerticalContentAlignment="Center"
+                  Checked="cdToppings_CheckedChanged"
+                  Unchecked="cdToppings_CheckedChanged"
+                  >
+            <WrapPanel>
+                <Image Width="50" Source="https://www.culturesforhealth.com/learn/wp-content/uploads/2016/04/Homemade-Cheddar-Cheese-header-1200x900.jpg"/>
+                <Label Name="lbTuna">Extra Cheese</Label>
+            </WrapPanel>
+        </CheckBox>
+
+        <CheckBox Margin="15,5" Name="cbTuna"
+                  VerticalContentAlignment="Center"
+                  Unchecked="cdToppings_CheckedChanged"
+                  Checked="cdToppings_CheckedChanged">
+            <WrapPanel>
+                <Image Width="50" Source="https://img3.21food.com/img/product/2020/11/19/food305242-1605757352491791.jpg"/>
+                <Label Name="lbCheese">Extra Tuna</Label>
+            </WrapPanel>
+        </CheckBox>
+        <CheckBox Margin="15,5" Name="cbHam"
+                  VerticalContentAlignment="Center"
+                  Unchecked="cdToppings_CheckedChanged"
+                  Checked="cdToppings_CheckedChanged">
+            <WrapPanel>
+                <Image Width="50" Source="https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/4f/4f990d0d5c449ba83476b78fa6ecbaf8b2b9d94b.jpg"/>
+                <Label Name="lbHam">Extra Ham</Label>
+            </WrapPanel>
+        </CheckBox>
+        <CheckBox Margin="15,5" Name="cbPepperoni"
+                  VerticalContentAlignment="Center"
+                  Unchecked="cdToppings_CheckedChanged"
+                  Checked="cdToppings_CheckedChanged">
+            <WrapPanel>
+                <Image Width="50" Source="https://forgetsugarfriday.com/wp-content/uploads/2018/06/pepperoni-chips-7-500x500.jpg"/>
+                <Label Name="lbPepperoni">Extra Pepperoni</Label>
+            </WrapPanel>
+        </CheckBox>
+    </StackPanel>
+</Window>
